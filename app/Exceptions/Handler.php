@@ -2,20 +2,14 @@
 
 namespace App\Exceptions;
 
-use Exception;
-use Illuminate\Auth\AuthenticationException;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use Illuminate\Http\Response;
-use InfyOm\Generator\Utils\ResponseUtil;
-use Laracasts\Flash\Flash;
-use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Tymon\JWTAuth\Exceptions\TokenExpiredException;
-use Tymon\JWTAuth\Exceptions\TokenInvalidException;
+use Spatie\Permission\Exceptions\UnauthorizedException;
+use Throwable;
 
 /**
- * Class Handler
- * @package App\Exceptions
+ * Class Handler.
  */
 class Handler extends ExceptionHandler
 {
@@ -25,7 +19,7 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
-        //
+        GeneralException::class,
     ];
 
     /**
@@ -34,6 +28,7 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontFlash = [
+        'current_password',
         'password',
         'password_confirmation',
     ];
@@ -41,14 +36,12 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
-     *
-     * @param Exception $exception
+     * @param  \Throwable  $exception
      * @return void
-     * @return mixed|void
-     * @throws Exception
+     *
+     * @throws \Throwable
      */
-    public function report(Exception $exception)
+    public function report(Throwable $exception)
     {
         parent::report($exception);
     }
@@ -56,48 +49,32 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Exception $exception
-     * @return \Illuminate\Http\Response
-     */
-    public function render($request, Exception $exception)
-    {
-        if ($exception instanceof NotFoundHttpException) {
-            //return response()->json(['token_expired'], $exception->getStatusCode());
-            if ($request->expectsJson()) {
-                return response()->json(['success' => false, 'message' => 'Please check the URL you submitted', 'data' => [], 'errors' => [['label' => 'URL Exception Error', 'message' => 'Please check the URL you submitted']]], 404);
-            }
-        }
-        if ($exception instanceof MethodNotAllowedHttpException) {
-            //return response()->json(['token_expired'], $exception->getStatusCode());
-//            return redirect(route('admin.notifications.index'));
-//            Flash::success('Kindly be Insaan Ka Baacha.');
-            return redirect(route('admin.dashboard'));
-        }
-        if ($request->expectsJson()) {
-            if ($exception instanceof TokenExpiredException) {
-                return response()->json(['token_expired'], $exception->getStatusCode());
-            } else if ($exception instanceof TokenInvalidException) {
-                return response()->json(['token_invalid'], $exception->getStatusCode());
-            }
-        }
-        return parent::render($request, $exception);
-    }
-
-    /**
-     * Convert an authentication exception into an unauthenticated response.
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Throwable  $exception
+     * @return \Symfony\Component\HttpFoundation\Response
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Illuminate\Auth\AuthenticationException $exception
-     * @return \Illuminate\Http\Response
+     * @throws \Throwable
      */
-    protected function unauthenticated($request, AuthenticationException $exception)
+    public function render($request, Throwable $exception)
     {
-        $prefix = $request->route()->action['prefix'];
-        $prefix = (empty($prefix)) ? "" : $prefix . ".";
+        if ($exception instanceof UnauthorizedException) {
+            return redirect()
+                ->route(homeRoute())
+                ->withFlashDanger(__('You do not have access to do that.'));
+        }
 
-        return $request->expectsJson()
-            ? response()->json(ResponseUtil::makeError('Unauthenticated', []), 401)
-            : redirect()->guest(route($prefix . 'login'));
+        if ($exception instanceof AuthorizationException) {
+            return redirect()
+                ->back()
+                ->withFlashDanger($exception->getMessage() ?? __('You do not have access to do that.'));
+        }
+
+        if ($exception instanceof ModelNotFoundException) {
+            return redirect()
+                ->route(homeRoute())
+                ->withFlashDanger(__('The requested resource was not found.'));
+        }
+
+        return parent::render($request, $exception);
     }
 }

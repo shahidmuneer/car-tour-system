@@ -2,29 +2,14 @@
 
 namespace App\Providers;
 
-use App\Models\Module;
-use App\Models\NotificationUser;
-use App\Observers\ModuleObserver;
-use App\Observers\NotificationObserver;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Schema;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class AppServiceProvider.
+ */
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        App::setLocale('en');
-        Schema::defaultStringLength(191);
-        Module::observe(ModuleObserver::class);
-        NotificationUser::observe(NotificationObserver::class);
-    }
-
     /**
      * Register any application services.
      *
@@ -33,5 +18,17 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+    }
+
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        
+        \Schema::defaultStringLength(191);
+        Paginator::useBootstrap();
     }
 }

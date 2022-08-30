@@ -2052,12 +2052,12 @@ article.faq h3 {
 }
 #press-main ul.exPager a:hover,
 #reviews-wraper ul.exPager a:hover {
-    border: 1px solid #09b0da;
+    border: 1px solid #ff0000;
 }
 #press-main ul.exPager .selected a,
 #reviews-wraper ul.exPager .selected a {
-    background: none repeat scroll 0 0 #09b0da;
-    border: 1px solid #09b0da;
+    background: none repeat scroll 0 0 #ff0000;
+    border: 1px solid #ff0000;
     color: #FFFFFF;
     font-weight: bold;
 }
@@ -2155,7 +2155,7 @@ article.faq h3 {
     content: "";
     display: block;
     height: 10px;
-    background: #09b0da;
+    background: #ff0000;
     position: absolute; left: -1px; right: -1px; bottom: -9px;
 }
 .box.bg-gray {background: #f8f8f8}
@@ -2844,7 +2844,7 @@ article.faq h3 {
 .gift-certificate-detail .includes-info .price-label {
     font-size: 18px;
     font-weight: bold;
-    color: #09b0da;
+    color: #ff0000;
     display: block;
     text-align: right;
     margin-bottom: 15px;
@@ -2852,7 +2852,7 @@ article.faq h3 {
 .gift-certificate-detail .includes-info h4 {
     font-size: 16px;
     color: #fff;
-    background: #09b0da;
+    background: #ff0000;
     padding: 8px 15px 7px;
     line-height: 1;
     margin: 0 0 20px;
@@ -2875,7 +2875,7 @@ article.faq h3 {
     text-align: right;
 }
 .gift-certificate-detail .includes-info ul li table tr td .blue {
-   color: #09b0da; 
+   color: #ff0000; 
 }
 .gift-certificate-detail .includes-info ul li table tr td .del {
     text-decoration: line-through;
@@ -4292,7 +4292,7 @@ a#map-marker {
 .notify-text { color: #447f48;  display: block; margin-top: 10px;}
 
 .morebtn,
-.lessbtn { color: #09b0da; text-decoration: none; cursor: pointer; font-family: 'titillium_webregular';}
+.lessbtn { color: #ff0000; text-decoration: none; cursor: pointer; font-family: 'titillium_webregular';}
 .lessbtn { float: right; }
 
 .more-content p { margin-top: 10px;}
@@ -7272,7 +7272,7 @@ body div#infscr-loading {
 }
 
 .select-count-lap label input:checked + i{
-    background-color: #09b0da;
+    background-color: #ff0000;
     box-shadow: none;
     background-image: url(../../../img/icon/check.png);
     background-repeat: no-repeat;

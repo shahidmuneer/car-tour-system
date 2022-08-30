@@ -4,9 +4,9 @@
 <!-- Mirrored from exoticsracing.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Aug 2022 09:06:56 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                    <meta id="viewport" name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-                <link rel="stylesheet" type="text/css" href="assets/2343043f/css/jquery-ui-bootstrap8db0.css?m=1536737786" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" type="text/css" href="assets/2343043f/css/jquery-ui-bootstrap8db0.css?m=1536737786" />
 <link rel="stylesheet" type="text/css" href="assets/1c325eb8/css/style8cdb.css?m=1596188684" />
 <link rel="stylesheet" type="text/css" href="assets/ca65e889/css/owl.carousel.mina9e0.css?m=1536327774" />
 <link rel="stylesheet" type="text/css" href="assets/ca65e889/css/owl.theme.default.mina9e0.css?m=1536327774" />

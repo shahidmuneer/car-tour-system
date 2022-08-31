@@ -173,7 +173,7 @@ input[type="text"].read-only {
     margin: 0;
     z-index: 1;
     background-color: #fafafa;
-    color: #ff0000;
+    color: #bf0202;
     font-size: 25px;
     font-style: italic;
     position: relative;
@@ -288,7 +288,7 @@ input[type="text"].read-only {
 }
 .b-cart i.count {
   display: block;
-  background: #ff0000;
+  background: #bf0202;
   border-radius: 50%;
   font-size: 11px;
   font-style: normal;
@@ -839,7 +839,7 @@ input[type="text"].b-select {
 
     padding: 0 25px 0 19px;
     background-color: #fff;
-    border: 1px solid #ff0000;
+    border: 1px solid #bf0202;
 }
 .b-select::-ms-expand,
 input[type="text"].b-select::-ms-expand {
@@ -879,7 +879,7 @@ input[type="text"].b-select::-ms-expand {
     background: none;
     position: absolute;
     pointer-events: none;
-    color: #ff0000;
+    color: #bf0202;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
@@ -1285,7 +1285,7 @@ input[type="text"].b-select::-ms-expand {
     width: inherit;
     border-radius: 50%;
     margin: 0 auto 16px;
-    border: 2px solid #ff0000; }
+    border: 2px solid #bf0202; }
   .b-review__slider .item .name {
     line-height: 1;
     font-size: 28px;
@@ -1358,7 +1358,7 @@ input[type="text"].b-select::-ms-expand {
     .w-reviews {
       padding-right: 0; } }
   .w-reviews .section-head {background: transparent; margin-bottom: 10px; padding-top: 0}
-  .w-reviews .section-head h2 {color: #ff0000}
+  .w-reviews .section-head h2 {color: #bf0202}
   .w-reviews .section-head p {color: #5a5a5a}
     @media (max-width: 1500px) and (min-width: 1180px) {
       .w-reviews .b-btn__bone {
@@ -1479,9 +1479,9 @@ input[type="text"].b-select::-ms-expand {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #ff0000;}
+  color: #bf0202;}
   .b-social__head .icon {
-    color: #ff0000;
+    color: #bf0202;
     font-size: 25px;
     margin-right: 9px;
     vertical-align: middle;
@@ -1544,7 +1544,7 @@ input[type="text"].b-select::-ms-expand {
         font-size: 60px; }
 
 .w-stats {
-  background: #ff0000;
+  background: #bf0202;
   /*min-height: 170px;*/
   position: relative; }
   .w-stats .container {
@@ -2396,7 +2396,7 @@ input[type="text"].b-select::-ms-expand {
   font-family: 'titillium_webregular';
   line-height: 1;
   padding: 10px 8px 9px;
-  background: #ff0000 none repeat scroll 0 0;
+  background: #bf0202 none repeat scroll 0 0;
 }
 header .b-btn__book {background: #00d052 none repeat scroll 0 0;}
 

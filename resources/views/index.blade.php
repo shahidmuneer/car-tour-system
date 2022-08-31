@@ -29,8 +29,8 @@
       <link rel="stylesheet" type="text/css" href="css/rwdgrid.minefa0.css?m=1661331896" />
       <link rel="stylesheet" type="text/css" href="css/new_stylesefa0.css?m=1661331896" />
       <link rel="stylesheet" type="text/css" href="assets/9fcfe31/css/style528a.css?m=1536327706" media="all" />
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
@@ -195,7 +195,8 @@
          /*<![CDATA[*/
             /*]]>*/
       </style>
-      <script type="text/javascript" src="assets/f784e789/jquery.min.js"></script>
+<script type="text/javascript" src="assets/f784e789/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="assets/d9133a5c/js/bootstrap.exdatepickerae9d.js?m=1578639916"></script>
       <script type="text/javascript">
          /*<![CDATA[*/
@@ -233,38 +234,9 @@
       <meta property="og:description" content="The supercar driving experience in Las Vegas. Drive exotic cars like Ferrari, Lamborghini, Porsche, McLaren and others. Book Now!" />
       <meta property="og:url" content="https://exoticsracing.com/" />
       <meta property="og:image" content="https://exoticsracing.com/img/logo/footer_logo.png" />
-      <script type="application/ld+json">
-         {
-             "@context": "http://schema.org",
-             "@type": "WebPage",
-             "name": "Exotics Racing | Las Vegas Supercar Driving Experience",
-             "description": "The supercar driving experience in Las Vegas. Drive exotic cars like Ferrari, Lamborghini, Porsche, McLaren and others. Book Now!",
-             "publisher": {
-                 "@type": "Organization",
-                 "name": "ExoticsRacing"
-             }
-         }
-      </script>        
+          
       <link rel="shortcut icon" href="images/favicon.png" type="image/x-png">
-      <script type="application/ld+json">
-         {
-           "@context" : "http://schema.org",
-           "@type" : "Organization",
-           "name" : "ExoticsRacing",
-           "url" : "https://exoticsracing.com",
-           "sameAs" : [ 
-             "https://www.facebook.com/exoticsracing", 
-             "https://www.instagram.com/exoticsracing/",
-             "https://www.youtube.com/user/exoticsracingschool"
-           ],
-           "logo" : "https://exoticsracing.com/img/logo/footer_logo.png",
-           "contactPoint" : [{
-             "@type" : "ContactPoint",
-             "telephone" : "+1 (702) 800-0521",
-             "contactType" : "customer service"
-           }]
-         }
-      </script>
+     
       <!-- SEO lang urls start -->
       <link rel="canonical" href="index.html" hreflang="en" />
       <link rel="alternate" href="es/index.html" hreflang="es" />
@@ -2345,7 +2317,6 @@
          { event: "viewHome"});
       </script>
       <!-- End Criteo Homepage tag -->
-      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
       <script type="text/javascript" src="assets/2343043f/js/bootstrap.bootbox.min1b4e.js?m=1536737766"></script>
       <script type="text/javascript" src="assets/2343043f/js/bootstrap.minb0c7.js?m=1536737781"></script>
       <script type="text/javascript" src="assets/c26d3fd7/js/es5-shim.min26d3.js?m=1536327699"></script>

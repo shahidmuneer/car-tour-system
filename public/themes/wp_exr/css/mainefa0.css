@@ -1447,6 +1447,25 @@ input[type="text"].b-select::-ms-expand {
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);}
+
+
+  .w-gallery1.main1 .b-gallery1{
+    /*left: 30px;*/
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);}
+
+
+    .w-gallery1:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.58);
+    display: none;
+  }
+
   .w-gallery:after {
     content: "";
     position: absolute;
